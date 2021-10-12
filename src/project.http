@@ -1,0 +1,38 @@
+@api = http://localhost:4000
+
+POST {{api}}/newProject
+Content-Type: application/json
+
+{
+  "title": "VentaLibre",
+  "description": "App de compra y venta",
+  "technologies": [
+    {"id": 1, "name": "Javascript"},
+    {"id": 2, "name": "React Native"}
+  ],
+  "repository": "www.github.com/wladimmer/ventalibre",
+  "photos": [
+    {"id": "1", "url": "http://www.photo.com"},
+    {"id": "2", "url": "http://www.photo.com"},
+    {"id": "3", "url": "http://www.photo.com"},
+    {"id": "5", "url": "http://www.photo.com"},
+    {"id": "6", "url": "http://www.photo.com"}
+  ]
+}
+
+###
+GET {{api}}/readProjects
+
+###
+PUT {{api}}/updateProject/61609546f8527d5057455cad
+content-type: application/json
+
+{
+  "title": "VentaLibre"
+}
+
+###
+DELETE {{api}}/deleteProject/1
+
+###
+POST {{api}}/findProject/1
